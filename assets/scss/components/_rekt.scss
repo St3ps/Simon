@@ -1,0 +1,96 @@
+
+
+
+
+
+.rekt {
+
+position: relative;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+align-self: center;
+//border: 3px solid #fff;
+  box-shadow: $bg-shadow-rekt;
+
+@include transition(box-shadow, 75ms, ease-out)
+
+}
+
+.red {
+background: hsl(0, 100%, 60%);
+
+left: 50%;
+
+}
+.green {
+  background: hsl(120, 100%,60%);
+  top:  150%;
+  left: 50%;
+}
+.yellow {
+  background: hsl(60, 100%, 60%);
+  bottom:  150%;
+  right: 50%;
+}
+.blue {
+  background: hsl(240, 100%, 60%);
+  right:  50%;
+  top: 0;
+
+}
+
+.lit {
+
+  background: white;
+
+}
+
+.hoverable {
+
+  @include hover-effect();
+  @include active-effect();
+
+}
+
+
+/*
+.rekt {
+
+  //background: cadetblue;
+  margin: 0;
+  width: 10vh;
+  height: 10vh;
+  border: solid 5px;
+  //display: inline-block;
+  //float: left;
+  border-radius: 50%;
+
+}
+
+.red {
+  background: hsl(0, 100%, 50%);
+}
+.green {
+  background: hsl(120, 100%, 50%);
+}
+.yellow {
+  background: hsl(60, 100%, 50%);
+}
+.blue {
+  background: hsl(240, 100%, 50%);
+
+}
+
+.lit {
+
+  background: white;
+
+}
+
+.hoverable {
+
+  @include hover-background()
+
+
+}*/

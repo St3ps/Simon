@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+
+    <link href="css/bootstrap/bootstrap.min.css"  rel="stylesheet">
+    <link href="css/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+
+</head>
+<body>
+<!--<div class="navbar-header navbar-fixed-top">-->
+    <!--<nav class="navbar navbar-default">-->
+        <!--<ul>-->
+        <!--<li data-step="0">0-->
+        <!--&lt;!&ndash;<li ><label>Mode:<input id="mode" value="normal"></label></li>&ndash;&gt;-->
+        <!--<li><button id="cmdMode" data-mode="Normal">Normal</button></li>-->
+        <!--<li><button id="cmdStart">Start</button></li>-->
+
+        <!--</ul>-->
+    <!--</nav>-->
+<!--</div>-->
+<div id="log">
+    <h2>Simon</h2>
+</div>
+<div class="container">
+    <div id="main">
+
+       <div class="tile"><div class="rekt red" id="rekt-1" role="button"></div></div>
+        <div class="tile"> <div class="rekt green" id="rekt-2" role="button" ></div> </div>
+       <div class="tile wide">
+           <div class="menu">
+        <ul>
+            <li><button id="cmdStart" class="btn btn-default">Start</button></li>
+            <li><button id="cmdMode" data-mode="Normal" class="btn btn-default">Normal</button></li>
+            <div class="well"><li>Step:</li>
+            <li> <span id="counter">--</span></li>
+            <!--<li id="log">Welcome! </li>-->
+            </div>
+            <li><button id="cmdReset" class="btn btn-default">Reset</button></li>
+
+
+        </ul>
+           </div>
+
+       </div>
+
+       <div class="tile"><div class="rekt yellow" id="rekt-3" role="button" ></div> </div>
+       <div class="tile"> <div class="rekt blue" id="rekt-4" role="button" ></div> </div>
+
+
+    </div>
+</div>
+
+
+
+
+<script src="../assets/js/jquery-3.1.0.min.js"></script>
+<script src="../assets/js/bootstrap/bootstrap.min.js"></script>
+<script src="../assets/js/main.js"></script>
+
+</body>
+</html>

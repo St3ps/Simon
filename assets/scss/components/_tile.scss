@@ -1,0 +1,23 @@
+.tile {
+
+  display: flex;
+
+  flex-grow: 1;
+  width: 50%;
+  height: 25%;
+//  border: 1px solid blue;
+//  background-color: green;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.wide {
+
+//  background: purple;
+  flex-grow: 2;
+  height: 50%;
+  width: 100%;
+
+
+}
