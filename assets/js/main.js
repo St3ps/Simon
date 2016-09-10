@@ -81,7 +81,7 @@ var Simon = {
 
 
         var random = Math.floor((Math.random()*4)+1);
-        this.sequence.push("rekt-" + random);
+        this.sequence.push("circle-" + random);
         this.copy = this.sequence.slice(0);
         this.deactivateBoard();
         this.animationSequence(this.sequence);
@@ -113,7 +113,7 @@ var Simon = {
 
         var that = this;
 
-      $('.rekt')
+      $('.circle')
 
         .on('click', function(e) {
 
@@ -145,7 +145,7 @@ var Simon = {
 
     console.log("Board Deactivated");
     var that = this;
-        $('.rekt')
+        $('.circle')
 
             .off('click')
             .removeClass('hoverable');
@@ -282,7 +282,7 @@ Simon.init();
 /*
 (function () {
 
-    $('.rekt').each(function (index) {
+    $('.circle').each(function (index) {
 
         var random = [0, 0, 0];
         random = random.map(function () {
