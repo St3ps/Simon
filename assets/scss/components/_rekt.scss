@@ -3,7 +3,7 @@
 
 
 
-.rekt {
+.circle {
 
 position: relative;
 width: 50px;
@@ -11,7 +11,7 @@ height: 50px;
 border-radius: 50%;
 align-self: center;
 //border: 3px solid #fff;
-  box-shadow: $bg-shadow-rekt;
+  box-shadow: $bg-shadow-circle;
 
 @include transition(box-shadow, 75ms, ease-out)
 
@@ -55,7 +55,7 @@ left: 50%;
 
 
 /*
-.rekt {
+.circle {
 
   //background: cadetblue;
   margin: 0;
