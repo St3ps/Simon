@@ -1,4 +1,5 @@
 
+
 var Simon = {
 
     sequence: [],
@@ -82,7 +83,7 @@ var Simon = {
         var random = Math.floor((Math.random()*4)+1);
         this.sequence.push("rekt-" + random);
         this.copy = this.sequence.slice(0);
-        this.deactivateBoard(); //makes sense for now
+        this.deactivateBoard();
         this.animationSequence(this.sequence);
 
     },
@@ -127,8 +128,16 @@ var Simon = {
 
         var desiredResponse = this.copy.shift();
         var actualResponse = $(e.target).attr('id');
-        //console.log(actualResponse);
+
+        var numOfElementId = actualResponse.slice(5);
+        //console.log("registerclick",numOfElementId);
+
+        this.playSound(numOfElementId);
+
+
         this.checkClick(desiredResponse === actualResponse);
+
+
 
     },
 
@@ -150,6 +159,7 @@ var Simon = {
         console.log(this.copy);
         /*if all clicks have been verified correctly and the copy property's length is zero then create new step*/
         if(bool && this.copy.length === 0) {
+
             console.log("steps", this.step);
             if(this.step === 20) {
                 this.endGame();
@@ -166,9 +176,11 @@ var Simon = {
             if(this.mode === 'normal') {
                 this.changeLog("Nop. Sorry. You're in normal mode so just try again!")
                 this.copy = this.sequence.slice(0);
+                this.deactivateBoard();
+                console.log("checkClick", this.copy);
                 setTimeout(function() {
 
-                    that.changeLog("Go!");
+                    that.animationSequence(that.sequence);
 
                 }, 1000)
 
@@ -183,6 +195,12 @@ var Simon = {
 
 
 
+    },
+
+    playSound: function(value) {
+
+        var audio = new Audio('../assets/sounds/simonSound' + value + '.mp3');
+        audio.play();
     },
 
     animationSequence: function(sequence){
