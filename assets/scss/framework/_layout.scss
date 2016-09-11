@@ -85,6 +85,7 @@ ul {
 
   list-style-type: none;
 
+
 }
 
 ul, li {
@@ -110,9 +111,12 @@ ul, li {
 
   .container {
 
-    margin-top: 10%;
+    margin-top: 5%;
+    //  i don't really understand why but the container is slightly edged to the left
+    padding-left: 6.5%;
 
   }
+
 
 
 

@@ -51,6 +51,11 @@ var Simon = {
     start: function() {
 
 
+        $('#cmdMode').addClass('disabled');
+        $('#cmdStart').addClass('disabled');
+
+
+
         this.active = true;
         this.changeLog("Go!")
         this.newStep();
@@ -129,7 +134,7 @@ var Simon = {
         var desiredResponse = this.copy.shift();
         var actualResponse = $(e.target).attr('id');
 
-        var numOfElementId = actualResponse.slice(5);
+        var numOfElementId = actualResponse.slice(7);
         //console.log("registerclick",numOfElementId);
 
         this.playSound(numOfElementId);
@@ -243,6 +248,11 @@ var Simon = {
 
         console.log("endGame function");
         /*should be a prompt here*/
+
+        $('#cmdMode').removeClass('disabled');
+        $('#cmdStart').removeClass('disabled');
+
+
         this.active = false;
         this.init();
 
